@@ -1,4 +1,5 @@
 # Deepfake Video Detection Using Deep Learning
+![MIT License](https://img.shields.io/badge/License-MIT-green.svg)
 
 ## 📌 Project Overview
 This project aims to detect deepfake videos using advanced deep learning techniques. The model analyzes video frames to distinguish between real and manipulated content.
