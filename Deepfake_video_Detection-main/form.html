@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        label, input, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        input, select {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <h2>Event Registration Form</h2>
+    <form id="registrationForm" onsubmit="return validateForm()">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}">
+        
+        <label for="event">Select Event</label>
+        <select id="event" name="event" required>
+            <option value="">--Select an Event--</option>
+            <option value="workshop">Workshop</option>
+            <option value="seminar">Seminar</option>
+            <option value="conference">Conference</option>
+        </select>
+        
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        function validateForm() {
+            const form = document.getElementById('registrationForm');
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const phone = form.phone.value.trim();
+            const event = form.event.value;
+
+            if (!name || !email || !phone || !event) {
+                alert('Please fill out all fields.');
+                return false;
+            }
+            
+            if (!/^[0-9]{10}$/.test(phone)) {
+                alert('Please enter a valid 10-digit phone number.');
+                return false;
+            }
+
+            alert('Registration Successful!');
+            return true;
+        }
+    </script>
+</body>
+</html>
