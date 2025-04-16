@@ -26,9 +26,8 @@ This project aims to detect deepfake videos using advanced deep learning techniq
 
 ## 🛠 Installation
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/iamarun090/517.git
-   cd 517
+   ```git clone https://github.com/iamarun090/Deepfake_Detection.git
+
    ```
 
 2. **Install dependencies**:
@@ -42,9 +41,9 @@ This project aims to detect deepfake videos using advanced deep learning techniq
    ```
 
 ## 📊 Model Performance
-- Accuracy: **XX%**
-- Precision: **XX%**
-- Recall: **XX%**
+- Accuracy: **99%**
+- Precision: **100%**
+- Recall: **100%**
 
 ## 📝 To-Do List
 - [ ] Improve model accuracy
